@@ -1,0 +1,9 @@
+header h1 {
+  display: none;
+}
+
+body {
+  height: 98vh;
+  width: 98vh;
+  grid-template-areas: "Header", "main", "footer";
+}/*# sourceMappingURL=index.css.map */
