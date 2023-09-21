@@ -44,4 +44,14 @@ main div p {
 
 footer {
   grid-area: footer;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    display: grid;
+    grid-template-rows: auto;
+  }
+  div section:nth-child(1) {
+    display: flex;
+  }
 }/*# sourceMappingURL=index.css.map */
