@@ -24,7 +24,10 @@ main {
 main h3 {
   margin: auto;
 }
-main section div {
+main div section :nth-child(1) {
+  display: flex;
+}
+main div section div {
   border: 2px solid black;
   background-color: lightgray;
 }
