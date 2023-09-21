@@ -1,18 +1,41 @@
-header{
-
-    h1{
-        display: none;
-    }
-}
-
-
-
 body{
     height: 98vh;
     width: 98vh;
     grid-template-areas: 
-    "Header",
+    "header",
     "main",
-    "footer"
-    ;
+    "footer";
+}
+
+header{
+    grid-area: header;
+
+    h1{
+        display: none;
+    }
+    img{
+        vertical-align: center;
+    }
+}
+
+
+main{
+    grid-area: main;
+    width: 100%;
+    height: 100%;
+    h3{
+       margin: auto;
+    }
+
+    section{
+
+        div{
+            border: 2px solid black;
+        }
+    }
+}
+
+
+footer{
+    grid-area: footer;
 }
