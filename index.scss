@@ -30,7 +30,7 @@ main{
        margin: auto;
     }
 div{
-   > :nth-child(1){
+   section:nth-child(1){
         display:flex;
         }
     section{

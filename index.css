@@ -24,7 +24,7 @@ main {
 main h3 {
   margin: auto;
 }
-main div > :nth-child(1) {
+main div section:nth-child(1) {
   display: flex;
 }
 main div section div {
