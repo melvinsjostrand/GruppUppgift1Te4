@@ -1,17 +1,19 @@
 body {
-  height: 98vh;
-  width: 98vh;
-  grid-template-areas: "header", "main", "footer";
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "main" "footer";
 }
 
 header {
   grid-area: header;
 }
-header img {
-  vertical-align: center;
-}
 header h1 {
   display: none;
+}
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
@@ -24,6 +26,7 @@ main h3 {
 }
 main section div {
   border: 2px solid black;
+  background-color: lightgray;
 }
 
 footer {
