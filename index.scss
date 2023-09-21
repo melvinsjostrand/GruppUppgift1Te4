@@ -27,41 +27,46 @@ main{
     width: 100%;
     height: 100%;
     margin: auto;
-    background-color: blue;
 
     h3{
        margin: auto;
     }
 
-div{
-    background-color: white;
-    section:nth-child(1){
-        display:flex;
-
-        }
-    section{
-        width: 80%;
-        img{
-            width: 100px;
-            height: 50px;
-            margin-left: auto;
-            margin-right: auto;
+    div{
+        section:nth-child(1){
+            display:grid;   
+            grid-template-columns: auto 50px auto;
     
-        }
-        
-           
+        } 
+        background-color: white;
+        section{
+            h2{
+                text-align: center;
+            }
+            img{
+                width: 100px;
+            }
+
             div{
                 border: 2px solid black;
                 background-color: lightgray;
             }
-        }
-        p{
-            padding-left: 10px;
-            padding-right: 10px;
+            p{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            img:nth-child(1){
+                margin-left: auto;
+                margin-right: 40px;
+            }
+            img:nth-child(3){
+                margin-right: auto;
+                margin-left: 40px;
+            }
         }
     }
 }
-
 
 footer{
     grid-area: footer;
@@ -72,45 +77,31 @@ footer{
         display: grid;
         grid-template-rows: auto;
     }
-    img{
-
+    header{
+        img{
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
     div{
-        width: 50%;
+        width: 90%;
         margin: auto;
-        section:nth-child(1){
-            display:flex;
-        }
-    section{
+       
+        section{
             display: grid;
-            grid-template-columns: auto;
+            grid-template-columns: 150px auto;
             grid-template-rows: 1fr ;
             padding-top: 10px;
             margin: auto;
-        
-            div{
-                width: 100%;
-            }
             p{
                 font-size: 20px;
-                text-align: ce;
             }
-        h3{
-            margin-left: 0;
-            margin-right: 0;
-            font-size: 30px;
-            text-align: center;
-        }
-        img{
-            width: 100px;
-            height: 50px;
-            display:flex;
+            h3{
+                margin-left: 0;
+                margin-right: 0;
+                font-size: 30px;
+                text-align: center;
+            }
         }
     }
-    }
-
 }
-
-//ta bort margin på bilden så den hamnar längst till vänster.
-//gör så att veckan och pilarna är till höger om header IMG
-//gör så att alla dagar ligger vänster om maträtten
