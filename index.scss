@@ -67,6 +67,10 @@ footer{
         display: grid;
         grid-template-rows: auto;
     }
+    img{
+        margin-left: 0;
+        margin-right: 100;
+    }
     div{
         section:nth-child(1){
             display:flex;
