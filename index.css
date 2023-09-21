@@ -29,7 +29,9 @@ main div section:nth-child(1) {
 }
 main div section img {
   width: 100px;
-  height: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 main div section div {
   border: 2px solid black;
