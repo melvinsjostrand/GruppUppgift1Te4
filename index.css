@@ -7,11 +7,11 @@ body {
 header {
   grid-area: header;
 }
-header h1 {
-  display: none;
-}
 header img {
   vertical-align: center;
+}
+header h1 {
+  display: none;
 }
 
 main {
