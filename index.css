@@ -24,6 +24,9 @@ main {
 main h3 {
   margin: auto;
 }
+main div section:nth-child(1) {
+  display: flex;
+}
 main div section img {
   width: 100px;
   height: 100px;

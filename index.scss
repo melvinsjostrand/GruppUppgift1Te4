@@ -32,6 +32,9 @@ main{
        margin: auto;
     }
 div{
+   section:nth-child(1){
+        display:flex;
+        }
     section{
         img{
             width: 100px;
