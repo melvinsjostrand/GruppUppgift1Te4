@@ -26,19 +26,20 @@ main{
     grid-area: main;
     width: 100%;
     height: 100%;
+
     h3{
        margin: auto;
     }
-div{
-   section:nth-child(1){
-        display:flex;
-        }
-    section{
+    div{
+        section:nth-child(1){
+                display:flex;
+                }
+        section{
 
-            div{
-                border: 2px solid black;
-                background-color: lightgray;
-            }
+                div{
+                    border: 2px solid black;
+                    background-color: lightgray;
+                }
         }
     }
 }
