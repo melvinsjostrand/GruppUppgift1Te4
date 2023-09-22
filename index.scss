@@ -24,105 +24,101 @@ header{
 
 main{
     grid-area: main;
-    width: 100%;
-    height: 100%;
+    width: 80%;
     margin: auto;
-    background-color: blue;
     h3{
        margin: auto;
     }
-
+}
 div{
     background-color: white;
     section:nth-child(1){
         display:flex;
 
         }
-    section{
-        width: 100%;
-        img{
-            width: 100px;
-            height: 50px;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-
-            div{
-                border: 2px solid black;
-                background-color: lightgray;
+        section{
+            width: 100%;
+            img{
+                width: 100px;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+    
+    
+                div{
+                    border: 2px solid black;
+                    background-color: lightgray;
+                }
+            }
+            p{
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
-        p{
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    }
-
-
-
-footer{
-    grid-area: footer;
-}
-
-@media screen and (min-width:800px){
-    main{
-        grid-area: main;
-        width: 100%;
-        margin: auto;
-        background-color: honeydew;
-        border-top-style: solid;
-        border-top-color: black;
-        
-        h3{
-           margin: auto;
-        }
-    }
-    header{
-        grid-area: header;
-        background-color: lightcyan;
+    
+    
+    
+    footer{
+        grid-area: footer;
     }
     
-    body{
-        display: grid;
-        grid-template-rows: auto;
-    }
-    header{
-        img{
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
-    div{
-        width: 50%;
-        margin: auto;
-        border-bottom-style: solid;
-        border-right-style: solid;
-        border-left-style: solid;
-        border-color: black;
-        box-shadow: 7px 7px 5px black;
-        
-        section:nth-child(1){
-            display:flex;
-        }
-    section{
-            display: grid;
-            grid-template-columns: 150px auto;
-            grid-template-rows: 1fr ;
-            padding-top: 10px;
+    @media screen and (min-width:800px){
+        main{
+            grid-area: main;
+            width: 100%;
             margin: auto;
-            p{
-                font-size: 20px;
-                text-align: ce;
-            }
+            background-color: honeydew;
+            border-top-style: solid;
+            border-top-color: black;
+    
             h3{
-                margin-left: 0;
-                margin-right: 0;
-                font-size: 30px;
-                text-align: center;
+               margin: auto;
             }
         }
+        header{
+            grid-area: header;
+            background-color: lightcyan;
+        }
+    
+        body{
+            display: grid;
+            grid-template-rows: auto;
+        }
+        header{
+            img{
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+        div{
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            border-bottom-style: solid;
+            border-right-style: solid;
+            border-left-style: solid;
+            border-color: black;
+            box-shadow: 7px 7px 5px black;
+    
+            section:nth-child(1){
+                display:flex;
+            }
+        section{
+                display: grid;
+                padding-top: 10px;
+                margin: auto;
+                padding-bottom: 15px;
+                p{
+                    font-size: 20px;
+                    text-align: ce;
+                }
+                h3{
+                    font-size: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    
     }
-
-}
