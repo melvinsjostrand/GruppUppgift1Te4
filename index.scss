@@ -85,6 +85,10 @@ div{
         body{
             display: grid;
             grid-template-rows: auto;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
         }
         header{
             img{
@@ -112,7 +116,7 @@ div{
                 padding-bottom: 15px;
                 p{
                     font-size: 20px;
-                    text-align: ce;
+                    text-align: center;
                 }
                 h3{
                     font-size: 30px;

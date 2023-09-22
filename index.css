@@ -72,6 +72,10 @@ footer {
   body {
     display: grid;
     grid-template-rows: auto;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
   }
   header img {
     margin-right: auto;
@@ -98,7 +102,7 @@ footer {
   }
   div section p {
     font-size: 20px;
-    text-align: ce;
+    text-align: center;
   }
   div section h3 {
     font-size: 30px;
