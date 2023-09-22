@@ -5,6 +5,7 @@ body{
     "header"
     "main"
     "footer";
+    
 }
 
 header{
@@ -22,16 +23,7 @@ header{
 }
 
 
-main{
-    grid-area: main;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    background-color: blue;
 
-    h3{
-       margin: auto;
-    }
 
 div{
     background-color: white;
@@ -40,7 +32,7 @@ div{
 
         }
     section{
-        width: 80%;
+        width: 100%;
         img{
             width: 100px;
             height: 50px;
@@ -48,11 +40,11 @@ div{
             margin-right: auto;
     
         }
-        
-           
+
             div{
                 border: 2px solid black;
                 background-color: lightgray;
+                
             }
         }
         p{
@@ -60,7 +52,7 @@ div{
             padding-right: 10px;
         }
     }
-}
+
 
 
 footer{
@@ -68,20 +60,38 @@ footer{
 }
 
 @media screen and (min-width:800px){
+    main{
+        grid-area: main;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: lightgray;
+        h3{
+           margin: auto;
+        }
+    }
+    header{
+        grid-area: header;
+        background-color: lightgray;
+    }
+    
     body{
         display: grid;
         grid-template-rows: auto;
+        margin: 0px;
     }
     img{
 
     }
     div{
-        width: 50%;
+        width: 60%;
         margin: auto;
+        padding-bottom: 10px;
         section:nth-child(1){
             display:flex;
         }
     section{
+        width: 80%;
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: 1fr ;
