@@ -16,26 +16,36 @@ header img {
   margin-right: auto;
 }
 
-div {
+main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: blue;
+}
+main h3 {
+  margin: auto;
+}
+main div {
   background-color: white;
 }
-div section:nth-child(1) {
+main div section:nth-child(1) {
   display: flex;
 }
-div section {
-  width: 100%;
+main div section {
+  width: 80%;
 }
-div section img {
+main div section img {
   width: 100px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
 }
-div section div {
+main div section div {
   border: 2px solid black;
   background-color: lightgray;
 }
-div p {
+main div p {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -64,38 +74,31 @@ footer {
     grid-template-rows: auto;
     margin: 0px;
   }
+  header img {
+    margin-right: 0;
+    margin-left: 0;
+  }
   div {
-    width: 60%;
+    width: 50%;
     margin: auto;
-    padding-bottom: 10px;
   }
   div section:nth-child(1) {
     display: flex;
   }
   div section {
-    width: 80%;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 150px auto;
     grid-template-rows: 1fr;
     padding-top: 10px;
     margin: auto;
   }
-  div section div {
-    width: 100%;
-  }
   div section p {
     font-size: 20px;
-    text-align: ce;
   }
   div section h3 {
     margin-left: 0;
     margin-right: 0;
     font-size: 30px;
     text-align: center;
-  }
-  div section img {
-    width: 100px;
-    height: 50px;
-    display: flex;
   }
 }/*# sourceMappingURL=index.css.map */
