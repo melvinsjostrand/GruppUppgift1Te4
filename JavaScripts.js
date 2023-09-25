@@ -7,7 +7,6 @@ let json = [
 let day = [
     "måndag" , "tisdag" , "onsdag"  ,"torsdag" , "fredag"
 ]
-let index = 1;
 
 function init(){
     week();
@@ -41,16 +40,16 @@ function createLunch(){
     let h3 = document.createElement("h3");
     h3.innerText = day[i];
     let div = document.createElement("div");
-        for(l = 1; l < 4; l++){
+        for(index = 1; index < 4; index++){
            
             span = document.createElement("span");
             P = document.createElement("p");
             div.appendChild(P);  
 
             P.appendChild(span);
-            span.innerText = "Lunch " + l;
+            span.innerHTML = "Lunch " + index;
             console.log(span);
-            P.innerText = json[i];
+            P.innerHTML = json[1];
         }
 
             matsedel.appendChild(section);
