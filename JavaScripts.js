@@ -1,6 +1,9 @@
 let json = [
-
+    "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé" ,  
+    "Potatis- och zucchiniplättar serveras med rårörda lingon och salladsbuffé",
+    "Spaghetti Bolognese Pastasås på nötfärs serveras med salladsbuffé"
 ]
+
 let day = [
     "måndag" , "tisdag" , "onsdag"  ,"torsdag" , "fredag"
 ]
@@ -11,6 +14,7 @@ function init(){
     for(i = 0; i < 5; i++){
         createLunch();
     }
+    //körs för att skapa matsedel
 }
 window.onload = init;
 
@@ -31,36 +35,32 @@ function week(){
 function createLunch(){
     let P;
     let span;
-    let text = [
-        "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé" ,  
-        "Potatis- och zucchiniplättar serveras med rårörda lingon och salladsbuffé",
-        "Spaghetti Bolognese Pastasås på nötfärs serveras med salladsbuffé"
-        ]
-   
     let matsedel = document.getElementById("matsedel");
     let section = document.createElement("section");
+    
     let h3 = document.createElement("h3");
+    h3.innerText = day[i];
     let div = document.createElement("div");
         for(l = 1; l < 4; l++){
            
             span = document.createElement("span");
             P = document.createElement("p");
             div.appendChild(P);  
-           
+
             P.appendChild(span);
             span.innerText = "Lunch " + l;
-             P.innerText += text[1];
             console.log(span);
-         
-    
+            P.innerText = json[i];
         }
-            section.appendChild(h3);
+
             matsedel.appendChild(section);
+            section.appendChild(h3);
             section.appendChild(div);
-            h3.innerText = day[i];
+            
+
     }
 
 
-async function getjson(){
+/*async function getjson(){
     let path = ""
-}
+}*/
