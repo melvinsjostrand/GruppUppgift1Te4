@@ -1,11 +1,15 @@
 let json = [
 
 ]
-
-let i = 1;
+let day = [
+    "måndag" , "tisdag" , "onsdag"  ,"torsdag" , "fredag"
+]
+let index = 1;
 
 function init(){
     week();
+    CreateSection();
+    createLunch();
     for(i = 0; i < 5; i++){
     days();
     }
@@ -27,31 +31,30 @@ function week(){
 }
 
 function CreateSection(){
-    let section = document.createElement("section");
-    let h3 = document.createElement("h3");
-    
-    section.appendChild(h3);
-    h3.innerText = Day;
+
    
 }
 
-function createLunch(){
-   
-    let matsedel = document.getElementById("matsedel");
-    
-    for(i = 0; i < 3; i++){
-        let div = document.createElement("div");
-        let P = document.createElement("p");
-        let Span = document.createElement("span");
-    }
 
+function createLunch(CreateSection){
+   for(i = 0; i < 5; i++){
+    let matsedel = document.getElementById("matsedel");
+    let section = document.createElement("section");
+    let h3 = document.createElement("h3");
+    let div = document.createElement("div");
+    let P = document.createElement("p");
+    let span = document.createElement("span");
+
+    section.appendChild(h3);
     matsedel.appendChild(section);
     section.appendChild(div);
     div.appendChild(P);
     P.appendChild(span);
-    Span.innerText = "lunch" + i++;
+    h3.innerText = day[i];
+    span.innerText = "lunch" + index++;
+    P.innerText += "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé";
+    }
 }
-
 
 async function getjson(){
     let path = ""
