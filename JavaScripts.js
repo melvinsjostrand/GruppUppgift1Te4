@@ -2,11 +2,10 @@ let json = [
 
 ]
 
+let i = 1;
 
 function init(){
-
-    createLunch;
-    CreateSection;
+    week();
     for(i = 0; i < 5; i++){
     days();
     }
@@ -15,26 +14,16 @@ window.onload = init;
 
 
 function days(){
-
-/*skapa så att alla maträtter visas.
-    den ska skapa rätt antal maträtter i matsedel
-    */
+    for(Element in JSON){
+        createLunch();
+    }
 }
 
-
-function createLunch(){
-    let matsedel = document.getElementById("matsedel");
-    let div = document.createElement("div");
-    let P = document.createElement("p");
-    let Span = document.createElement("span");
-    
-    matsedel.appendChild(section);
-    section.appendChild(div);
-    div.appendChild(P);
-    P.appendChild(span);
-    Span.innerText = "lunch" + i++;
-    //skapa P tag.
-    //Skapa span i P tag
+function week(){
+    let h2 = document.getElementsByTagName("h2");
+    console.log(h2); 
+    h2[0].innerText = "Vecka.38";
+    //funkar att visa vecka.
 }
 
 function CreateSection(){
@@ -42,13 +31,28 @@ function CreateSection(){
     let h3 = document.createElement("h3");
     
     section.appendChild(h3);
-    h3.innerText = day;
-    //skapa section
+    h3.innerText = Day;
+   
+}
+
+function createLunch(){
+   
+    let matsedel = document.getElementById("matsedel");
+    
+    for(i = 0; i < 3; i++){
+        let div = document.createElement("div");
+        let P = document.createElement("p");
+        let Span = document.createElement("span");
+    }
+
+    matsedel.appendChild(section);
+    section.appendChild(div);
+    div.appendChild(P);
+    P.appendChild(span);
+    Span.innerText = "lunch" + i++;
 }
 
 
-/*
-    Hur man skapar saker i JS för att sen displaya det i HTML kod
-    document.createElement(tagName);
-        t.ex div,section,p,span
-*/
+async function getjson(){
+    let path = ""
+}
