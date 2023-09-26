@@ -7,8 +7,9 @@ let json =
         "food":[
             {
             "lunch" :  "nioamdw",
-            }
-        ]
+            },
+            
+        ] 
         }
     }
 
@@ -23,6 +24,7 @@ function init(){
     week();
     for(i = 0; i < 5; i++){
         CreateSection();
+        CreateText();
     }
 }
 
@@ -63,13 +65,13 @@ function createLunch(f , s){
             P.appendChild(span);
             span.innerHTML = "Lunch " + (index+1);
         }
-    //CreateText();
+    CreateText(P);
     }
 
-function CreateText(){
-
-    P.innerHTML += json.date.food[i].lunch1;
-    console.log(json)
+function CreateText(P,element){
+    P = document.createElement("p");
+    P.innerText += json.date.food;
+    console.log(json.date);
 }
 
 /*async function getjson(){
