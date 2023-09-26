@@ -1,7 +1,7 @@
 let json = [
     "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé" ,
 ]
-
+let weekNumber = 38;
 let day = [
     "Måndag" , "Tisdag" , "Onsdag"  ,"Torsdag" , "Fredag"
 ]
@@ -11,21 +11,14 @@ function init(){
     for(i = 0; i < 5; i++){
         createLunch();
     }
-    //körs för att skapa matsedel
 }
+    //körs för att skapa matsedel
 window.onload = init;
-
-
-/*function days(){
-    for(Element in JSON){
-        createLunch();
-    }
-}*/
 
 function week(){
     let h2 = document.getElementsByTagName("h2");
     console.log(h2); 
-    h2[0].innerText = "Vecka.38";
+    h2[0].innerText = "Vecka."+weekNumber;
     //funkar att visa vecka.
 }
 
@@ -59,3 +52,27 @@ function createLunch(){
 /*async function getjson(){
     let path = ""
 }*/
+
+
+/*lA = document.getElementById("vänsterpil");
+rA = document.getElementById("högerpil");
+
+
+lA.addEventListener("click",event => {
+    if(weekNumber-1<1){
+    location.href = "index.html?week=52"; 
+    } else{
+        weekNumber--;
+        location.href = "index.html?week=" + weekNumber; 
+    }        
+    })
+
+
+
+rA.addEventListener("click" , event => {
+    if(weekNumber+1>52){
+    location.href = "index.html?week=1"; 
+    } else{
+    location.href = "index.html?week=" + (weekNumber+1); 
+    }
+})*/
