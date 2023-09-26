@@ -1,11 +1,9 @@
 let json = [
-    "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé" ,  
-    "Potatis- och zucchiniplättar serveras med rårörda lingon och salladsbuffé",
-    "Spaghetti Bolognese Pastasås på nötfärs serveras med salladsbuffé"
+    "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé" ,
 ]
 
 let day = [
-    "måndag" , "tisdag" , "onsdag"  ,"torsdag" , "fredag"
+    "Måndag" , "Tisdag" , "Onsdag"  ,"Torsdag" , "Fredag"
 ]
 
 function init(){
@@ -36,27 +34,25 @@ function createLunch(){
     let span;
     let matsedel = document.getElementById("matsedel");
     let section = document.createElement("section");
-    
     let h3 = document.createElement("h3");
-    h3.innerText = day[i];
     let div = document.createElement("div");
+        matsedel.appendChild(section);
+        section.appendChild(h3);
+            h3.innerText = day[i];
+        section.appendChild(div);
+
         for(index = 1; index < 4; index++){
            
             span = document.createElement("span");
             P = document.createElement("p");
             div.appendChild(P);  
-
-            P.appendChild(span);
-            span.innerHTML = "Lunch " + index;
-            console.log(span);
-            P.innerHTML = json[1];
-        }
-
-            matsedel.appendChild(section);
-            section.appendChild(h3);
-            section.appendChild(div);
             
-
+            P.appendChild(span);
+            console.log(span);
+            span.innerHTML = "Lunch " + index;
+            P.innerHTML += json[0];
+            console.log(json)
+        }
     }
 
 
