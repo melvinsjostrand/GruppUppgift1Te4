@@ -1,6 +1,20 @@
-let json = [
-    "Moussaka Grekisk potatis- och grönsaksgratäng på ärtfärs serveras med salladsbuffé" ,
-]
+let json = {
+        "date": {
+            "dayNum":10,
+            "month":"sep",
+            "dayName": "Monday",
+        "food":[
+      {
+        "lunch1" :  "nioamdw",
+         "lunch2" : "imdawoimawd",
+         "lunch3" : "nidawniwdan"
+      
+    }
+    ]
+}
+}
+
+let index;
 let weekNumber = 38;
 let day = [
     "Måndag" , "Tisdag" , "Onsdag"  ,"Torsdag" , "Fredag"
@@ -9,45 +23,86 @@ let day = [
 function init(){
     week();
     for(i = 0; i < 5; i++){
-        createLunch();
+        CreateSection();
     }
 }
-    //körs för att skapa matsedel
+
+//körs för att skapa matsedel
 window.onload = init;
 
 function week(){
     let h2 = document.getElementsByTagName("h2");
     console.log(h2); 
-    h2[0].innerText = "Vecka."+weekNumber;
+    h2[0].innerText = "Vecka."+ weekNumber;
     //funkar att visa vecka.
 }
 
-function createLunch(){
-    let P;
-    let span;
-    let matsedel = document.getElementById("matsedel");
+function CreateSection(){
+    let food = document.getElementById("matsedel");
     let section = document.createElement("section");
     let h3 = document.createElement("h3");
-    let div = document.createElement("div");
-        matsedel.appendChild(section);
+        food.appendChild(section); 
         section.appendChild(h3);
-            h3.innerText = day[i];
-        section.appendChild(div);
+        h3.innerText = day[i];
+    createLunch(food, section);
+}
 
-        for(index = 1; index < 4; index++){
+function createLunch(f , s){
+    let P;
+    let span;
+    
+    let div = document.createElement("div");
+        s.appendChild(div);
+        for(index = 0; index < json.date.food.length; index++){
            
             span = document.createElement("span");
             P = document.createElement("p");
             div.appendChild(P);  
-            
             P.appendChild(span);
-            console.log(span);
-            span.innerHTML = "Lunch " + index;
-            P.innerHTML += json[0];
+            span.innerHTML = "Lunch " + (index+1) ;
+
+
+
+
+            console.log(json.date.food[0][0]);
+            let lunch = "lunch" + (index+1);
+            P.innerHTML += json.date.food[0].lunch1;
+            P.innerHTML += json.date.food[0].lunch2;
             console.log(json)
         }
+    //CreateText();
     }
+/*div
+    section
+        h3 /h3
+        div
+            P
+            span /span lunch
+            /p
+            P
+            span /span lucnh
+            /p
+            P
+            span /span lunch
+            /p
+        /div
+        section
+        h3 /h3
+        div
+            P
+            span /span lunch2
+            /p
+            P
+            span /span lucnh2
+            /p
+            P
+            span /span lunch2
+            /p
+        /div
+*/
 
+function CreateText(){
+}
 
 /*async function getjson(){
     let path = ""

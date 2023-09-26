@@ -2,23 +2,19 @@ body {
   display: grid;
   grid-template-rows: auto;
   grid-template-areas: "header" "main" "footer";
-  margin-left: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  margin-right: 0px;
 }
 
 header {
   grid-area: header;
   background-color: lightcyan;
 }
-header h1 {
-  display: none;
-}
 header img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+header h1 {
+  display: none;
 }
 
 main {
@@ -30,7 +26,7 @@ main {
 }
 main h3 {
   margin: auto;
-  font-size: 30px;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -83,17 +79,9 @@ footer {
   main h3 {
     margin: auto;
   }
-  header {
-    grid-area: header;
-    background-color: lightcyan;
-  }
   body {
     display: grid;
     grid-template-rows: auto;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-right: 0px;
   }
   header img {
     margin-right: auto;
@@ -107,9 +95,6 @@ footer {
     border-right-style: solid;
     border-left-style: solid;
     border-color: black;
-  }
-  div section:nth-child(1) {
-    display: flex;
   }
   div section {
     display: grid;
